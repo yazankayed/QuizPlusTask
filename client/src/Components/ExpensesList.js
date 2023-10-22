@@ -33,7 +33,7 @@ const ExpensesList = (props) => {
   }, [allObjects]);
 
   return (
-    <div className="super-awesome-page">
+    <div className="expenseListContainer">
       <h1 className='ListTitle'>Expenses List</h1>
 
       <div className="search-container">
