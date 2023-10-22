@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { BarChart } from '@mui/x-charts/BarChart';
-import {
-    Routes,
-    Route,
-    Link
-    } from "react-router-dom";
+import '../AnalyzeExpenses.css';
 
-    
+import { BarChart } from '@mui/x-charts/BarChart';
+
 const AnalyzeExpenses = (props) => {
 
     const [highest, setHighest] = useState();
@@ -21,10 +17,9 @@ const AnalyzeExpenses = (props) => {
         axios.get("http://localhost:8000/api/allexpensesmonth")
             .then(response=>{
                 setChartData(response.data);
-                console.log(chartData[0].totalAmount);
             })
             .catch(err => console.error(err));
-    },[]);
+    },[chartData]);
 
 const chartSetting = {
   xAxis: [
@@ -124,27 +119,37 @@ const valueFormatter = (value) => `${value}$`;
     useEffect(()=>{
         axios.get("http://localhost:8000/api/average")
             .then(res=>{
-                setAverage(res.data);
+                
+                setAverage(Math.round(res.data));
             })
             .catch(err => console.error(err));
     },[]);
     
     return (
-        <div>
-            <h1>Monthly Expenses</h1>
-            <BarChart
+      <div className="expense-info-container">
+  <h1 className="expense-title">Monthly Expenses</h1>
+  <div className="chart">
+    <BarChart
       dataset={dataset}
       yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ dataKey: 'expense', label: 'Expense per month ', valueFormatter }]}
+      series={[{ dataKey: 'expense', label: 'Expense per month', valueFormatter }]}
       layout="horizontal"
       {...chartSetting}
     />
-
-            <h1>{highest}</h1>
-            <h1>{lowest}</h1>
-            <h1>{total}</h1>
-            <h1>{average}</h1>
-        </div>
+  </div>
+  <h1 className="expense-title">Summary Statistics</h1>
+  <div className="summary-container">
+    <div className="summary-row">
+      <h1 className="expense-data">Total: {total}</h1>
+      <h1 className="expense-data">Avg: {average}</h1>
+    </div>
+    <div className="summary-row">
+      <h1 className="expense-data">Max: {highest}</h1>
+      <h1 className="expense-data">Min: {lowest}</h1>
+    </div>
+  </div>
+</div>
+    
     )
 }
     

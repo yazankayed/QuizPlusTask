@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Link } from 'react-router-dom';
-import '../Footer.css'; 
-
 
 
 export default function CenteredTabs() {
@@ -15,10 +13,10 @@ export default function CenteredTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%',position:"fixed",bottom:"0", left:"0", bgcolor: '#b0bec5' }}>
+    <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
         <Tabs value={value} onChange={handleChange} centered>
-        <Tab label={<Link className='footerLink' to="/analyize">Analyze</Link>} />
-        <Tab label={<Link className='footerLink' to="/">List</Link>} />
+        <Tab label={<Link to="/analyize">Analyze</Link>} />
+        <Tab label={<Link to="/">List</Link>} />
         </Tabs>
     </Box>
     );

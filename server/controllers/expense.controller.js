@@ -154,19 +154,3 @@ module.exports.highestExpenseOnject = (request, response) => {
       .catch(err => response.json(err));
   }
 
-
-
-  module.exports.searchByAttribute = (req, res) => {
-    const title = 'title'; // Replace with the actual attribute name in your Expense schema
-    const searchValue = req.query.searchValue; // Get the attribute value from the query string
-  
-    const query = {};
-    query[title] = searchValue;
-  
-    Expense.find(query)
-      .exec()
-      .then(results => {
-        res.json(results);
-      })
-      .catch(err => res.status(500).json(err));
-  };

@@ -1,18 +1,15 @@
-import React from 'react'
-import {Link } from "react-router-dom";
-import defaultimage from "../Images/defaultimage.png"
-import avatar from "../Images/avatar.png"
-    
-const Header = (props) => {
-    
-    
-    return (
-        <div>
-            <img style={{width:"50px"}} src={defaultimage} ></img>
-            <img style={{width:"50px"}} src={avatar} ></img>
+import React from 'react';
+import defaultimage from '../Images/defaultimage.png';
+import avatar from '../Images/avatar.png';
+import '../Header.css'; // Import your external CSS file
 
-        </div>
-    )
-}
-    
+const Header = (props) => {
+  return (
+    <div className="header-container">
+      <img className="header-image" src={defaultimage} alt="Default Image" />
+      <img className="header-image" src={avatar} alt="Avatar" />
+    </div>
+  );
+};
+
 export default Header;

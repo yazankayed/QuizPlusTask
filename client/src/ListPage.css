@@ -1,0 +1,53 @@
+.super-awesome-page {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .search-container {
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .expenses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .add-expense-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto 40px auto;
+    text-decoration: none;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 50%;
+  }
+  
+  .add-expense-link:hover {
+    background-color: #005bbd;
+  }
+  
+  .ListTitle{
+    text-align: center;
+  }

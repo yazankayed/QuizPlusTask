@@ -1,0 +1,13 @@
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px; 
+    background-color: rgb(10,102,194);
+  }
+  
+  .header-image {
+    width: 7%;
+    margin: 0 10px; 
+  }
+  

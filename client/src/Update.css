@@ -1,0 +1,77 @@
+.update-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .update-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 20px 0; 
+  }
+  
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 20px;
+  }
+  
+  .update-title-error {
+    color: #f00;
+    font-size: 14px;
+  }
+  
+  .update-amount-error {
+    color: #f00;
+    font-size: 14px;
+  }
+  
+  .update-dueDate-error {
+    color: #f00;
+    font-size: 14px;
+  }
+  
+  input[type="submit"] {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #005bbd;
+  }
+  
+  .update-back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0073e6;
+    font-size: 16px;
+  }
+  

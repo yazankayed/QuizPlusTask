@@ -1,0 +1,51 @@
+.expense-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expense-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.expense-info {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.delete-button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+.edit-button {
+  background-color: #0073E6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover,
+.edit-button:hover {
+  background-color: #d00;
+}
