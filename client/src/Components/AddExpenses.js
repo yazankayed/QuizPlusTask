@@ -27,11 +27,20 @@ const AddExpenses = (props) => {
         if (err.response.data.errors.amount) {
           setAmountErr(err.response.data.errors.amount.message);
         }
+        else{
+          setAmountErr("")
+        }
         if (err.response.data.errors.title) {
           setTitleErr(err.response.data.errors.title.message);
         }
+        else{
+          setTitleErr("")
+        }
         if (err.response.data.errors.dueDate) {
           setDueDateErr(err.response.data.errors.dueDate.message);
+        }
+        else{
+          setDueDateErr("")
         }
       }
     });

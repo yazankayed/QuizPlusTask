@@ -19,7 +19,9 @@ const Update = (props) => {
     axios.get('http://localhost:8000/api/expense/' + id).then((res) => {
       setTitle(res.data.title);
       setAmount(res.data.amount);
-      setDueDate(res.data.dueDate);
+      const dueDateFromDatabase = new Date(res.data.dueDate);
+    const formattedDueDate = dueDateFromDatabase.toISOString().split('T')[0];
+    setDueDate(formattedDueDate);
     });
   }, []);
   const updatePerson = (e) => {
@@ -37,11 +39,20 @@ const Update = (props) => {
           if (err.response.data.errors.amount) {
             setAmountErr(err.response.data.errors.amount.message);
           }
+          else{
+            setAmountErr("")
+          }
           if (err.response.data.errors.title) {
             setTitleErr(err.response.data.errors.title.message);
           }
+          else{
+            setTitleErr("")
+          }
           if (err.response.data.errors.dueDate) {
             setDueDateErr(err.response.data.errors.dueDate.message);
+          }
+          else{
+            setDueDateErr("")
           }
         }
       });
